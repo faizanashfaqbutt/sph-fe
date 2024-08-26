@@ -111,7 +111,7 @@ export default function SearchForm() {
                             </div>
                             <div className="field col-12 md:col-6">
                                 <label htmlFor="radius">Radius</label>
-                                <InputText id="radius" tooltipOptions={{ position: "bottom" }} tooltip="Area around you, you want to search in" type="text" {...register("radius")} />
+                                <InputText id="radius" tooltipOptions={{ position: "bottom" }} tooltip="Area around you, you want to search in KM" type="text" {...register("radius")} />
                             </div>
 
                             <div className="field col-12 md:col-6">
