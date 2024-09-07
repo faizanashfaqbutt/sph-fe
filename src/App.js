@@ -49,6 +49,8 @@ import LoginForm from './custom/Login';
 import Register from './custom/Register';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import ProfileEdit from './custom/ProfileEdit';
+import Trending from './custom/Trending';
+import TrendSearchHistory from './custom/TrendSearchHistory';
 const App = () => {
     const [layoutMode, setLayoutMode] = useState('static');
     const [layoutColorMode, setLayoutColorMode] = useState('light')
@@ -171,6 +173,13 @@ const App = () => {
             items: [{
                 label: 'All Product', icon: 'pi pi-fw pi-home', to: '/all-products'
             }]
+        },
+        {
+            label: 'Check Trending',
+            items: [
+                {label: 'Trending', icon: 'pi pi-fw pi-home', to: '/trending'},
+                {label: 'Trend Search History', icon: 'pi pi-fw pi-home', to: '/trending-history'},
+            ]
         },
         // {
         //     label: 'UI Components', icon: 'pi pi-fw pi-sitemap',
@@ -320,6 +329,8 @@ const App = () => {
                             <Route path="/" exact render={() => <Dashboard colorMode={layoutColorMode} location={location} />} />
                             <Route path="/all-products" exact render={() => <ProductsList />} />
                             <Route path="/profile" exact render={() => <ProfileEdit />} />
+                            <Route path="/trending" exact render={() => <Trending />} />
+                            <Route path="/trending-history" exact render={() => <TrendSearchHistory />} />
                     
 {/* 
                             <Route path="/formlayout" component={FormLayoutDemo} />
