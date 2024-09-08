@@ -51,6 +51,7 @@ import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import ProfileEdit from './custom/ProfileEdit';
 import Trending from './custom/Trending';
 import TrendSearchHistory from './custom/TrendSearchHistory';
+import ScrapJobList from './custom/ScrapJobList';
 const App = () => {
     const [layoutMode, setLayoutMode] = useState('static');
     const [layoutColorMode, setLayoutColorMode] = useState('light')
@@ -164,9 +165,10 @@ const App = () => {
     const menu = [
         {
             label: 'Search Product',
-            items: [{
-                label: 'Search Product', icon: 'pi pi-fw pi-home', to: '/'
-            }]
+            items: [
+                {label: 'Search Product', icon: 'pi pi-fw pi-home', to: '/'},
+                {label: 'Scraping Status', icon: 'pi pi-fw pi-home', to: '/jobs'}
+            ]
         },
         {
             label: 'All Product',
@@ -331,6 +333,7 @@ const App = () => {
                             <Route path="/profile" exact render={() => <ProfileEdit />} />
                             <Route path="/trending" exact render={() => <Trending />} />
                             <Route path="/trending-history" exact render={() => <TrendSearchHistory />} />
+                            <Route path="/jobs" exact render={() => <ScrapJobList />} />
                     
 {/* 
                             <Route path="/formlayout" component={FormLayoutDemo} />
